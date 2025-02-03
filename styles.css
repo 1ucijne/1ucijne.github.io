@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-first_body {
+body {
     font-family: 'Helvetica', sans-serif;
     color: #F5F5DC;
-    background: url('4b61be0bc4224a0696f9b788f9a94804.jpg') no-repeat center center/cover;
+    background: url('IMG_7474.png') no-repeat center center/cover;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
+    padding: 30px 50px;
 }
 
 .logo a {
@@ -81,4 +81,3 @@ nav ul li a {
     width: 100%;
     border-radius: 8px;
 }
-
