@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+first_body {
     font-family: 'Helvetica', sans-serif;
     color: #F5F5DC;
     background: url('4b61be0bc4224a0696f9b788f9a94804.jpg') no-repeat center center/cover;
@@ -89,7 +89,7 @@ nav ul li a {
             box-sizing: border-box;
         }
 
-        body {
+        second_body {
             font-family: 'Helvetica', sans-serif;
             color: #F5F5DC;
             background: #808080;
