@@ -46,7 +46,7 @@ nav ul li a {
     height: 20px;
 }
 
-.1hero {
+.hero {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -54,17 +54,17 @@ nav ul li a {
     padding: 80px 80px;
 }
 
-.1hero-text {
+.hero-text {
     margin-left: 5%;
 }
 
-.1hero h1 {
+.hero h1 {
     font-size: 50px;
     font-weight: normal;
     letter-spacing: -1px;
 }
 
-.1hero p {
+.hero p {
     font-size: 18px;
     letter-spacing: 6px;
     text-transform: uppercase;
