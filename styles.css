@@ -46,7 +46,7 @@ nav ul li a {
     height: 20px;
 }
 
-.hero {
+.1hero {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@ nav ul li a {
     padding: 80px 80px;
 }
 
-.hero-text {
+.1hero-text {
     margin-left: 5%;
 }
 
