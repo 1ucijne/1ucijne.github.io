@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Jost', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    color: #F5F5DC;
+    background-color: #595957;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px; /* Reduced padding to move content higher */
+    font-family: 'Jost', sans-serif;
+    z-index: 10; /* Ensure header is above other elements */
+}
+
+nav {
+    margin-left: auto;
+    padding-right: 125px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 125px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    pointer-events: auto; /* Ensure pointer events are enabled */
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 400; /* Adjust font weight as needed */
+    letter-spacing: 2px;
+}
+
+.logo-link:link, .logo-link:visited, .logo-link:hover, .logo-link:active {
+    text-decoration: none; /* Ensure underline is removed in all states */
+    color: #F5F5DC; /* Ensure color remains consistent in all states */
+}
+
+.social img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.gallery {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.thumbnails img {
+    width: 80px;
+    cursor: pointer;
+    margin: 5px;
+    border: 2px solid transparent;
+}
+.thumbnails img:hover {
+    border: 2px solid #000;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
+}
+.image-viewer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-viewer img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+.description {
+    width: 30%;
+    padding-left: 20px;
+}
