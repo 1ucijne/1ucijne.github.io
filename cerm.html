@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Viewer</title>
+    <link rel="stylesheet" href="cerm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gallery">
+            <div class="arrow" onclick="scrollThumbnails(-50)">&#9650;</div>
+            <div class="thumbnails" id="thumbnails">
+                <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)">
+                <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)">
+                <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)"><!-- Add more images as needed -->
+            </div>
+            <div class="arrow" onclick="scrollThumbnails(50)">&#9660;</div>
+        </div>
+        <div class="image-viewer">
+            <img id="main-image" src="image1.jpg">
+        </div>
+        <div class="description">
+            <p id="image-description">Description for Image 1</p>
+        </div>
+    </div>
+    <script src="cerm.js"></script>
+</body>
+</html>

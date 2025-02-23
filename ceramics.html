@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramics Portfolio</title>
+    <link rel="stylesheet" href="ceramics.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html" class="logo-link">LUCIJNE</a></div>
+        <nav>
+            <ul>
+                <li><a href="ceramics.html">Ceramics</a></li>
+                <li><a href="fineart.html">Fine Art</a></li>
+                <li><a href="#artist">Artist</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="https://instagram.com/1ucijne" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </header>
+    <main>
+            <div class="container">
+                <div class="gallery">
+                    <div class="arrow" onclick="scrollThumbnails(-50)">&#9650;</div>
+                    <div class="thumbnails" id="thumbnails">
+                        <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                        <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                        <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                        <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)">
+                        <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                        <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                        <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                        <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="showLargeImage(this)">
+                        <img src="IMG_7450.png" alt="Ceramic 2" onclick="showLargeImage(this)">
+                        <img src="IMG_7453.png" alt="Ceramic 3" onclick="showLargeImage(this)">
+                        <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)">
+                        <img src="IMG_7464.png" alt="Ceramic 4" onclick="showLargeImage(this)"><!-- Add more images as needed -->
+                    </div>
+                    <div class="arrow" onclick="scrollThumbnails(50)">&#9660;</div>
+                </div>
+                <div class="image-viewer">
+                    <img id="main-image" src="IMG_6051.jpg">
+                </div>
+                <div class="description">
+                    <p id="image-description">Description for Image 1</p>
+                </div>
+            </div>
+            <script src="cerm.js"></script>
+        </body>
+        </html>
