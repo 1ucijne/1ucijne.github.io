@@ -1,44 +1,66 @@
- *{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    font-family: 'Jost', sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Jost', sans-serif;
     color: #F5F5DC;
-    background: url('4b61be0bc4224a0696f9b788f9a94804.jpg')cover no-repeat center center/cover;
+    background-color: #595957;
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
+    padding: 30px 100px; /* Adjust padding as needed */
+    font-family: 'Jost', sans-serif;
+    z-index: 10; /* Ensure header is above other elements */
 }
 
-.logo a {
-    text-decoration: none;
-    color: #F5F5DC;
-    font-size: 18px;
-    letter-spacing: 2px;
+nav {
+    margin-left: auto;
+    padding-right: 125px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 125px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #F5F5DC;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    pointer-events: auto; /* Ensure pointer events are enabled */
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 400; /* Adjust font weight as needed */
+    letter-spacing: 2px;
+}
+
+.logo-link:link, .logo-link:visited, .logo-link:hover, .logo-link:active {
+    text-decoration: none; /* Ensure underline is removed in all states */
+    color: #F5F5DC; /* Ensure color remains consistent in all states */
 }
 
 .social img {
@@ -46,83 +68,82 @@ nav ul li a {
     height: 20px;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 80px 80px;
-}
-
-.hero-text {
-    position: absolute;
-    top: 80px;
-    left: 20px;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-
-.hero-text h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.hero-text p {
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-
-.carousel-container {
-    position: absolute;
-    top: 150px;
-    left: 20px;
-    width: 120px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.carousel {
+main {
+    padding-top: 100px; /* Adjust padding to match the height of the header */
+    padding-bottom: 20px; /* Adjust bottom padding as needed */
+    height: calc(100vh - 100px); /* Adjust height to fit within the viewport */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    overflow-y: hidden;
+    box-sizing: border-box; /* Ensure padding is included in the height calculation */
 }
 
-.carousel img {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s, border 0.3s;
-}
-
-.carousel img.selected {
-    opacity: 1;
-    border: 2px solid black;
-}
-
-.large-image {
-    position: absolute;
-    top: 100px;
-    left: 900px;
-    width: 600px;
-}
-
-.large-image img {
+.container {
+    display: flex;
     width: 100%;
-    height: auto;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin to control spacing at the bottom */
+    flex-grow: 1; /* Ensure the container grows to fill the available space */
+    box-sizing: border-box; /* Ensure padding is included in the height calculation */
 }
 
-/* Hover scrolling effect */
-.carousel-container:hover .carousel {
-    animation: scrollUpDown 4s infinite alternate ease-in-out;
+.gallery-container {
+    width: 30%;
+    height: calc(100vh - 140px); /* Set a fixed height for the gallery container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
 }
 
-@keyframes scrollUpDown {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100px);
-    }
+.gallery-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    gap: 8px;
+    grid-auto-flow: dense;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 0; /* Remove rounded corners */
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+.gallery-item.tall {
+    grid-row: span 2;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.display-area {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#display {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 0; /* Remove rounded corners */
 }

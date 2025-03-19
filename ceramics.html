@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceramics Portfolio</title>
     <link rel="stylesheet" href="ceramics.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html">LUCIJNE</a></div>
+        <div class="logo"><a href="index.html" class="logo-link">LUCIJNE</a></div>
         <nav>
             <ul>
                 <li><a href="ceramics.html">Ceramics</a></li>
@@ -18,38 +19,39 @@
             </ul>
         </nav>
         <div class="social">
-            <img src="instagram-white-icon.png" alt="Instagram">
+            <a href="https://instagram.com/1ucijne" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
         </div>
     </header>
     <main>
-        <div class="hero-text">
-            <h1>Lucine Sokola</h1>
-            <p>FINE ART + CERAMICS</p>
-        </div>
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <img src="IMG_6051.jpg" alt="Ceramic 1" onclick="changeImage(This)">
-                <img src="IMG_7450.png" alt="Ceramic 2" onclick="changeImage(This)">
-                <img src="IMG_7464.png" alt="Ceramic 3" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 4" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 5" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 6" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 7" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 8" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 9" onclick="changeImage(This)">
-                <img src="IMG_7474.png" alt="Ceramic 10" onclick="changeImage(This)">
+        <div class="container">
+            <!-- Gallery Column -->
+            <div class="gallery-container">
+                <div class="gallery">
+                    <img src="IMG_0868.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0873.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0934.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0955.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0979.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0984.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_0995.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_1174.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_1210.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_1251.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_1531.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_1614.jpeg" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_7450.png" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_7453.png" class="gallery-item" onclick="showImage(this.src)">
+                    <img src="IMG_6051.jpg" class="gallery-item" onclick="showImage(this.src)">
+                </div>
+            </div>
+            
+            <!-- Display Area -->
+            <div class="display-area">
+                <img id="display" src="IMG_6051.jpg">
             </div>
         </div>
-        <div class="large-image" id="largeImageContainer">
-            <img src="IMG_7474.png" id="largeImage" alt="Large Ceramic">
-        </div>
     </main>
-    <script>
-        function changeImage(imgElement) {
-            document.getElementById('largeImage').src = imgElement.src;
-            document.querySelectorAll('.carousel img').forEach(img => img.classList.remove('selected'));
-            imgElement.classList.add('selected');
-        }
-    </script>
 </body>
 </html>

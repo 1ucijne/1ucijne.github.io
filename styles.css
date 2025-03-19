@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    font-family: 'Jost', sans-serif;
+}
+
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Jost', sans-serif;
     color: #F5F5DC;
-    background: url('4b61be0bc4224a0696f9b788f9a94804.jpg') no-repeat center center/cover;
+    background: url('Untitled-1.png') no-repeat center center/cover;
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,26 +24,41 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 100px;
+    font-family: 'Jost', sans-serif;
+    z-index: 10; /* Ensure header is above other elements */
 }
 
-.logo a {
-    text-decoration: none;
-    color: #F5F5DC;
-    font-size: 18px;
-    letter-spacing: 2px;
+nav {
+    margin-left: auto;
+    padding-right: 125px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 125px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #F5F5DC;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    pointer-events: auto; /* Ensure pointer events are enabled */
+}
+
+.logo-link {
+    text-decoration:none;
+    color: #F5F5DC;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 400; /* Adjust font weight as needed */
+    letter-spacing: 2px;
+}
+.logo-link:link, .logo-link:visited, .logo-link:hover, .logo-link:active {
+    text-decoration: none; /* Ensure underline is removed in all states */
+    color: #F5F5DC; /* Ensure color remains consistent in all states */
 }
 
 .social img {
@@ -47,37 +67,48 @@ nav ul li a {
 }
 
 .hero {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: left;
     padding: 80px 80px;
+    position: relative;
+    z-index: 1; /* Ensure hero section is below the header */
 }
 
 .hero-text {
-    margin-left: 5%;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: floatUp 1.5s ease-out forwards;
+    font-family: 'Jost', sans-serif;
+    z-index: 2; /* Ensure hero text is above the hero section */
+}
+
+@keyframes floatUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 55px;
     font-weight: normal;
-    letter-spacing: -1px;
+    letter-spacing: 3px;
+    font-family: 'Jost', sans-serif;
 }
 
 .hero p {
-    font-size: 18px;
-    letter-spacing: 6px;
+    font-size: 21px;
+    letter-spacing: 8.25px;
     text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
 }
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 50px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 8px;
+/* Additional styles for the main content */
+main {
+    padding-top: 160px; /* Add padding to avoid overlap with fixed header */
+    min-height: calc(100vh - 160px); /* Ensure main content fills the remaining space */
+    display: flex;
+    flex-direction: column;
 }
